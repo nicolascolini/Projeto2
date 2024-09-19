@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#logo{
+    height: 175px;
+    width: 175px;
+}
+#fachada{
+    height: 400px;
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: 10px 30px 10px rgb(61, 78, 231);
+}
+#cabecalho{
+    height: 180px;
+    background-color: rgb(42, 108, 206);
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navegacao{
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+}
+#menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90px;
+    font-family: 'Roboto', cursive;
+    font-size: 1.8em;
+}
+a{
+    text-decoration: none;
+    color: rgb(98, 209, 204);
+}
+#conteudo {
+    height: 475px;
+    background-size: 15px;
+    font-family: 'Roboto', cursive;
+    font-size: 1.5em; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 60px; 
+    margin: 30px; 
+    box-sizing: border-box; 
+}
+
+#texto {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+#conteudo p,
+#conteudo h3 {
+    margin: 0; 
+}
+
+#fachada {
+    max-width: 50%; 
+    height: auto;
+}
+
+#contato{
+    background-image: url("../img/fundo.jpg");
+    background-size: 15px;
+    font-family: 'Roboto',cursive;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#contato form{
+    width: 450px;
+    font-family: ;
+}
+#rodape {
+    font-family: 'Roboto', cursive;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(149, 155, 185, 0.836);
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+#rodape img.icones {
+    width: 30px; 
+    height: auto; 
+    margin: 10px; 
+}
+
+#rodape br {
+    margin-bottom: 10px; 
+}
+
+.icones{
+    height: 35px;
+    width: 40px;
+    margin-right: 10px;
+}
+#historia img{
+    height: 600px;
+    width: 800px;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 25px;
+}
+#historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-image: url("../img/fundo.jpg");
+    background-size: 15px;
+    font-family: 'Roboto',cursive;
+    font-size: 2.5em;
+}
+.fotos{
+    height: 300px;
+    width: 520px;
+    margin-bottom: 20px;
+}
+#galeria{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
