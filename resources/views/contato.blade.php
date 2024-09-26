@@ -24,6 +24,9 @@
     </div>
     
     <div id="contato">
+
+    <h2>Fale Conosco</h2>
+    
        <form action="#">
             <label>Nome:</label>
             <input class="form-control" type="text" name="nome">
@@ -36,12 +39,12 @@
             <input class="btn btn-primary" type="submit"  value="Enviar">       
        </form>
 
-       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14452.999928855523!2d-50.1695107!3d-25.0933979!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a1338c2ca9d%3A0x4dd4827f11995364!2sFaculdade%20Senac%20Ponta%20Grossa!5e0!3m2!1spt-PT!2sbr!4v1688080528159!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.6046408972607!2d-49.26706792370584!3d-25.418041432420434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce418054cfc49%3A0x8efc2ccbaf001fde!2sR.%20Ivo%20Le%C3%A3o%2C%20460%20-%20Alto%20da%20Gl%C3%B3ria%2C%20Curitiba%20-%20PR%2C%2080030-180!5e0!3m2!1spt-BR!2sbr!4v1727356056029!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div id="rodape">
           Cafeteria Vida Feliz<br>
-          Rua Ivo Leão, 71, Alto da Glória, Curitiba, PR <br>
+          Rua Ivo Leão, 460, Alto da Glória, Curitiba, PR <br>
           Telefone: (42) 98785-9233<br>
           Whatsapp: (42) 98785-9233<br>
           E-mail: vidafeliz@gmail.com<br>

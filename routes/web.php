@@ -21,3 +21,9 @@ Route::get('/contato', action: function () {
 Route::get('/historia', action: function () {
     return view('historia');
 });
+
+Route::get('/teste', action: function () {
+
+$clientes = array("João", "Pedro", "Lucas");
+return view('teste', compact('clientes'));
+});

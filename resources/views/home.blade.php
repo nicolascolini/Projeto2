@@ -30,7 +30,7 @@
 
     <div id="rodape">
           Cafeteria Vida Feliz<br>
-          Rua Ivo Leão, 71, Alto da Glória, Curitiba, PR <br>
+          Rua Ivo Leão, 460, Alto da Glória, Curitiba, PR <br>
           Telefone: (42) 98785-9233<br>
           Whatsapp: (42) 98785-9233<br>
           E-mail: vidafeliz@gmail.com<br>

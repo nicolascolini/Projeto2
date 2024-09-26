@@ -76,10 +76,11 @@ a{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    text-decoration: none;
+    color: rgb(98, 209, 204);
 }
 #contato form{
     width: 450px;
-    font-family: ;
 }
 #rodape {
     font-family: 'Roboto', cursive;
@@ -106,23 +107,58 @@ a{
     width: 40px;
     margin-right: 10px;
 }
-#historia img{
-    height: 600px;
-    width: 800px;
-    box-shadow: 10px 10px 10px gray;
-    border-radius: 25px;
-}
-#historia{
+
+#historia {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
-    background-image: url("../img/fundo.jpg");
-    background-size: 15px;
-    font-family: 'Roboto',cursive;
-    font-size: 2.5em;
+    background-image: url("../img/fotocafe.jpg");
+    background-size: cover; 
+    background-position: center;
+    height: 800px; 
+    min-width: 100%; 
+    padding: 33px; 
+    font-family: 'Roboto', cursive;
+    font-size: 1.8em;
+    margin: 0; 
+    color: white; 
 }
+
+#historia img {
+    height: auto; 
+    width: 100%; 
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 25px;
+    margin-bottom: 20px; 
+}
+
+#historia p {
+
+    margin: 0 20px;
+    max-width: 900px;
+    text-shadow: 2px 2px 5px gray;
+}
+
+@media (max-width: 768px) {
+    #historia {
+        font-size: 1.8em; 
+        height: 500px;
+    }
+
+    #historia img {
+        max-width: 90%;  
+    }
+}
+
+@media (max-width: 480px) {
+    #historia {
+        font-size: 1.1em; 
+        height: 400px;
+    }
+}
+
 .fotos{
     height: 300px;
     width: 520px;
@@ -134,4 +170,5 @@ a{
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    text-decoration: none;
 }
