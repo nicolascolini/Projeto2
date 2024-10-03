@@ -1,29 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TesteController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/galeria', function () {
-    return view('galeria');
-});
-
-Route::get('/contato', action: function () {
-    return view('contato');
-});
-
-Route::get('/historia', action: function () {
-    return view('historia');
-});
-
-Route::get('/teste', action: function () {
-
-$clientes = array("João", "Pedro", "Lucas");
-return view('teste', compact('clientes'));
-});
+Route::get('galeria',[TesteController::class, 'galeria']);
+Route::get('home',[TesteController::class, 'home']);
+Route::get('contato',[TesteController::class, 'contato']);
+Route::get('historia',[TesteController::class, 'historia']);
+Route::get('teste',[TesteController::class, 'testar']);
