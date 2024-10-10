@@ -20,12 +20,12 @@
             <li><a href="/historia">História</a></li>
             <li><a href="/galeria">Galeria</a></li>
             <li><a href="/contato">Contato</a></li>
+            <li><a href="/cadastrarCliente"> Cadastro </a></li>
         </ul>
     </div>
     
     <div id="contato">
 
-    <h2>Fale Conosco</h2>
     
        <form action="#">
             <label>Nome:</label>
