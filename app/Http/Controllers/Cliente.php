@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ClienteModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -12,15 +13,7 @@ class Cliente extends Controller
     }
 
     public function store(Request $request){
-        $status = DB::table('clientes')->insert([
-
-            'nome'=> $request->input('nome'),
-            'cpf'=> $request->input('cpf'),
-            'telefone'=> $request->input('telefone'),
-            'email'=> $request->input('email'),
-
-
-        ]);
+        $status = ClienteModel::salvar($request);
 
         if ($status) {
 
@@ -31,4 +24,21 @@ class Cliente extends Controller
             return redirect()->back()->with('mensagem', 'cliente não cadastrado');
         }
     }
+
+    public function index(){
+
+        $clientes = ClienteModel::listar();
+        return view('Cliente.index', compact('clientes'));
+    }
+
+    public function destroy($id){
+        $status = ClienteModel::deletar($id);
+        if ($status) {
+            return redirect('listarCliente')->with('mensagem', 'Cliente deletado');
+    }
+    else{
+        return redirect('listarCliente')->with('mensagem', 'Cliente não encontrado');
+    }
+    }
+
 }

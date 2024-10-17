@@ -23,18 +23,41 @@
         </ul>
     </div>
 
-<form action="cadastrarCliente" method="post">
+    <div>
+        {{session(('mensagem'))}}
+<table>
+<tr>
+
+<th>Nome</th>
+<th>CPF</th>
+<th>Telefone</th>
+<th>Email</th>
+<th>Ações</th>
+</tr>
+
+@foreach($clientes as $cliente)
+<tr>
+    <td> {{ $cliente->nome }}</td>
+    <td> {{ $cliente->cpf }}</td>
+    <td> {{ $cliente->telefone }}</td>
+    <td> {{ $cliente->email }}</td>
+<td>
+
+<form action="deletarCliente/{{ $cliente->id }}" method="POST" onsubmit="return confirm('TEM CERTEZA?');">
 @csrf
- {{session('mensagem')}}
-<p>Nome: <input type="text" name="nome"></p>
-<p>CPF: <input type="text" name="cpf"></p>
-<p>Telefone: <input type="text" name="telefone"></p>
-<p>Email: <input type="text" name="email"></p>
-<input type="submit" value="Cadastrar">
+@method('DELETE')
+<button type="submit">Deletar</button>
 </form>
+</td>
 
-<a href="listarCliente">Listar Clientes</a>
+<td>
+<a href="Editar"></a>
+</td>
+</tr>
+@endforeach
+</table>
 
+    </div>
 
     <div id="rodape">
           Cafeteria Vida Feliz<br>
