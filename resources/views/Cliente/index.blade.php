@@ -14,6 +14,12 @@
         <img id="logo" src="img/logo.png" alt="Logo da Confeitaria">
      </div>
 
+     
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Buscar Cliente...">
+        <ul id="suggestions"></ul>
+    </div>
+
      <div id="navegacao">
         <ul id="menu">
             <li><a href="/home">Home</a></li>
@@ -24,40 +30,43 @@
     </div>
 
     <div>
-        {{session(('mensagem'))}}
-<table>
-<tr>
+    {{ session(('mensagem')) }}
+    <table>
 
-<th>Nome</th>
-<th>CPF</th>
-<th>Telefone</th>
-<th>Email</th>
-<th>Ações</th>
-</tr>
+        @foreach($clientes as $cliente)
+        <tr>
+            <td>Nome:</td>
+            <td>{{ $cliente->nome }}</td>
+        </tr>
+        <tr>
+            <td>CPF:</td>
+            <td>{{ $cliente->cpf }}</td>
+        </tr>
+        <tr>
+            <td>Telefone:</td>
+            <td>{{ $cliente->telefone }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ $cliente->email }}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form action="deletarCliente/{{ $cliente->id }}" method="POST" onsubmit="return confirm('TEM CERTEZA?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Deletar</button>
+                </form>
+            </td>
 
-@foreach($clientes as $cliente)
-<tr>
-    <td> {{ $cliente->nome }}</td>
-    <td> {{ $cliente->cpf }}</td>
-    <td> {{ $cliente->telefone }}</td>
-    <td> {{ $cliente->email }}</td>
-<td>
+            <td>
+                <a href="editarCliente/{{$cliente->id}}">Editar</a>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+</div>
 
-<form action="deletarCliente/{{ $cliente->id }}" method="POST" onsubmit="return confirm('TEM CERTEZA?');">
-@csrf
-@method('DELETE')
-<button type="submit">Deletar</button>
-</form>
-</td>
-
-<td>
-<a href="Editar"></a>
-</td>
-</tr>
-@endforeach
-</table>
-
-    </div>
 
     <div id="rodape">
           Cafeteria Vida Feliz<br>
@@ -69,5 +78,38 @@
           <a href="https://facebook.com"><img class="icones" src="https://imagepng.org/wp-content/uploads/2017/09/facebook-icone-icon.png"></a>
           <a href="https://instagram.com"><img class="icones" src="https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon-1.png"></a>
     </div>
+    
 </body>
+
+<script>
+    const clientes = @json($clientes); // Converte os dados do Laravel para um formato que o JS pode usar.
+
+    const searchInput = document.getElementById('search');
+    const suggestionsList = document.getElementById('suggestions');
+
+    // Função para filtrar e mostrar sugestões
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase();
+        suggestionsList.innerHTML = ''; // Limpa as sugestões
+
+        if (query) {
+            const filteredClientes = clientes.filter(cliente => 
+                cliente.nome.toLowerCase().includes(query) || 
+                cliente.cpf.includes(query) ||
+                cliente.telefone.includes(query) ||
+                cliente.email.toLowerCase().includes(query)
+            );
+
+            filteredClientes.forEach(cliente => {
+                const li = document.createElement('li');
+                li.textContent = `${cliente.nome} - ${cliente.cpf}`; // Ajuste a informação que deseja mostrar
+                li.addEventListener('click', function() {
+                    searchInput.value = cliente.nome; // Preenche o input com o nome do cliente
+                    suggestionsList.innerHTML = ''; // Limpa as sugestões
+                });
+                suggestionsList.appendChild(li);
+            });
+        }
+    });
+</script>
 </html>

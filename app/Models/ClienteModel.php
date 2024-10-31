@@ -35,4 +35,23 @@ class ClienteModel extends Model
         $status = DB::table('clientes')->delete($id);
         return $status;
     }
+
+    public static function consultar($id){
+        $clientes = DB::table('clientes')->where('id', $id)->first();
+        return $clientes;
+    }
+
+    public static function atualizar($request, $id){
+
+        $status = DB::table('clientes')->where('id', $id)->update([
+            'nome'=>$request->input('nome'),
+            'cpf'=>$request->input('cpf'),
+            'telefone'=>$request->input('telefone'),
+            'email'=>$request->input('email'),
+
+        ]);
+
+        return $status;
+
+    }
 }

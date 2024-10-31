@@ -67,21 +67,42 @@ a{
     height: auto;
 }
 
-#contato{
-    background-image: url("../img/fundo.jpg");
-    background-size: 15px;
-    font-family: 'Roboto',cursive;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-decoration: none;
-    color: rgb(98, 209, 204);
+body {
+    background-color: #f7f7f7; /* Cor de fundo da página */
 }
-#contato form{
-    width: 450px;
+
+#contato {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
 }
+
+#contato form {
+    width: 100%;
+}
+
+.form-control {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff; /* Fundo padrão para as caixas */
+}
+
+.form-control:hover {
+    background-color: #e6e6e6; /* Efeito de cor ao passar o mouse */
+    border-color: #aaa;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
+
 #rodape {
     font-family: 'Roboto', cursive;
     font-size: 1.3em;
@@ -219,3 +240,80 @@ a:hover {
     text-decoration: none;
 }
 
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Remove bordas duplas */
+
+}
+
+tr {
+    border: 1px solid #ccc; /* Borda para cada linha */
+}
+
+td {
+    padding: 5px; /* Padding reduzido */
+    border: 1px solid #ccc; /* Borda para células */
+}
+
+.attribute-value {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: space-between; /* Espaçamento entre atributo e valor */
+    align-items: center; /* Alinhar verticalmente ao centro */
+}
+
+td button {
+    background-color: #28a745; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    padding: 4px; /* Padding do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+    width: 100%; /* Largura total para o botão */
+}
+
+td button:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+}
+
+th {
+    background-color: #f2f2f2; 
+    font-weight: 500; 
+}
+
+#search-container {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#suggestions {
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+#suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #f0f0f0;
+}

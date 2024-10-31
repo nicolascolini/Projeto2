@@ -25,20 +25,17 @@
     </div>
     
     <div id="contato">
-
-    
-       <form action="#">
-            <label>Nome:</label>
-            <input class="form-control" type="text" name="nome">
-            <label>Telefone:</label>
-            <input class="form-control" type="tel" name="telefone">
-            <label>E-mail</label>
-            <input class="form-control" type="email" name="email">
-            <label>Digite a sua mensagem:</label>
-            <textarea class="form-control" name="mensagem" cols="30" rows="10"></textarea>
-            <input class="btn btn-primary" type="submit"  value="Enviar">       
-       </form>
-
+    <form action="#">
+        <label>Nome:</label>
+        <input class="form-control" type="text" name="nome">
+        <label>Telefone:</label>
+        <input class="form-control" type="tel" name="telefone">
+        <label>E-mail:</label>
+        <input class="form-control" type="email" name="email">
+        <label>Digite a sua mensagem:</label>
+        <textarea class="form-control" name="mensagem" cols="30" rows="10"></textarea>
+        <input class="btn btn-primary" type="submit" value="Enviar">
+    </form>
        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.6046408972607!2d-49.26706792370584!3d-25.418041432420434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce418054cfc49%3A0x8efc2ccbaf001fde!2sR.%20Ivo%20Le%C3%A3o%2C%20460%20-%20Alto%20da%20Gl%C3%B3ria%2C%20Curitiba%20-%20PR%2C%2080030-180!5e0!3m2!1spt-BR!2sbr!4v1727356056029!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
