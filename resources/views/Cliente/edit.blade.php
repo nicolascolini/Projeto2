@@ -23,6 +23,8 @@
         </ul>
     </div>
 
+    
+
 <form action="{{ url('editarCliente/' . $cliente->id) }}" method="POST">
 
 @csrf
